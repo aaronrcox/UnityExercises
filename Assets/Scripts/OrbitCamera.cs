@@ -10,6 +10,8 @@ public class OrbitCamera : MonoBehaviour
     private Transform hRotate { get { return transform.parent.parent; } }
     private Transform vRotate { get { return transform.parent; } }
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +21,11 @@ public class OrbitCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float hRot = 0;// Input.GetAxis("Horizontal");
+        float hRot = Input.GetAxis("Horizontal");
         if (Input.GetMouseButton(0))
             hRot += Input.GetAxis("Mouse X");
 
-        float vRot = 0; // Input.GetAxis("Vertical");
+        float vRot = Input.GetAxis("Vertical");
         if (Input.GetMouseButton(0))
             vRot -= Input.GetAxis("Mouse Y");
 
